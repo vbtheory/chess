@@ -1,2 +1,3 @@
 C:\Users\VB\AppData\Local\Temporary Projects\Echecs\bin\Debug\Echecs.exe.config
 C:\Users\VB\Documents\GitHub\chess\Echecs\Echecs\bin\Debug\Echecs.exe.config
+C:\Users\abderrahman\Documents\GitHub\chess\Echecs\Echecs\bin\Debug\Echecs.exe.config
