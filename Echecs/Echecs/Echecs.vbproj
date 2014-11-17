@@ -71,7 +71,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\AnimatedPbx.vb">
-      <SubType>Component</SubType>
+      <SubType>DesignCategory.Code</SubType>
+    </Compile>
+    <Compile Include="Classes\CustomListview.vb">
+      <SubType>DesignCategory.Code</SubType>
     </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
