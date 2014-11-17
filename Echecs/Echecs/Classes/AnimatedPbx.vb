@@ -3,7 +3,6 @@ Imports System.Drawing.Imaging
 
 Namespace Classes
 
-    <System.ComponentModel.DesignerCategory("DesignCategory.Code")>
     Public Class AnimatedPbx
         Inherits PictureBox
 
@@ -11,19 +10,13 @@ Namespace Classes
         Dim _brightness As Single = 0.5
         Dim _image As Bitmap
         Private _state = MouseState.None
-        Private _font = Font
-        Private _textAlign As StringAlignment = StringAlignment.Near
-        Private _titlePosition As TitlePosition = TitlePosition.Top
-        Private _titleColor As Color = Color.Red
 
         Public Sub New()
-            If Not System.ComponentModel.LicenseManager.UsageMode = System.ComponentModel.LicenseUsageMode.Designtime Then
-                SetStyle(ControlStyles.OptimizedDoubleBuffer + ControlStyles.ResizeRedraw, True)
-                SetStyle(ControlStyles.ContainerControl, False)
-                _timer.Interval = 30
-                AddHandler _timer.Tick, AddressOf Animate
-                _timer.Start()
-            End If
+            SetStyle(ControlStyles.OptimizedDoubleBuffer + ControlStyles.ResizeRedraw, True)
+            SetStyle(ControlStyles.ContainerControl, False)
+            _timer.Interval = 30
+            AddHandler _timer.Tick, AddressOf Animate
+            _timer.Start()
         End Sub
 
         Private Sub Animate(ByVal sender As Object, ByVal e As EventArgs)
@@ -50,16 +43,6 @@ Namespace Classes
             End Set
         End Property
 
-        Public Property TextFont() As Font
-            Get
-                Return _font
-            End Get
-            Set(ByVal value As Font)
-                _font = value
-                Invalidate()
-            End Set
-        End Property
-
         <Browsable(True), DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)>
         Public Overrides Property Text() As String
             Get
@@ -77,36 +60,6 @@ Namespace Classes
             End Get
             Set(value As MouseState)
                 _state = value
-            End Set
-        End Property
-
-        Public Property TextAlign As StringAlignment
-            Get
-                Return _textAlign
-            End Get
-            Set(value As StringAlignment)
-                _textAlign = value
-                Invalidate()
-            End Set
-        End Property
-
-        Public Property TitlePosition As TitlePosition
-            Get
-                Return _titlePosition
-            End Get
-            Set(value As TitlePosition)
-                _titlePosition = value
-                Invalidate()
-            End Set
-        End Property
-
-        Public Property TitleColor As Color
-            Get
-                Return _titleColor
-            End Get
-            Set(value As Color)
-                _titleColor = value
-                Invalidate()
             End Set
         End Property
 
@@ -134,15 +87,11 @@ Namespace Classes
             MyBase.OnPaint(e)
 
             Dim sf As New StringFormat
-            Dim r = New Rectangle(0, 0, Width, TextFont.Height + 3)
-
-            If (TitlePosition = TitlePosition.Bottom) Then r.Y = Height - (TextFont.Height + 3)
             sf.LineAlignment = StringAlignment.Center
-            sf.Alignment = TextAlign
 
             If (Not IsNothing(_image)) Then DrawImageWithBrightness(e.Graphics, _image, e.ClipRectangle, _brightness)
-            e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(150, TitleColor)), r)
-            e.Graphics.DrawString(MyBase.Text, TextFont, Brushes.White, r, sf)
+            e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(150, Color.Red)), 0, 0, Width, Font.Height + 3)
+            e.Graphics.DrawString(MyBase.Text, Font, Brushes.White, New RectangleF(0, 0, Width, Font.Height + 3), sf)
             ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.White, ButtonBorderStyle.Solid)
             e.Graphics.DrawRectangle(Pens.Black, New Rectangle(e.ClipRectangle.X + 1, e.ClipRectangle.Y + 1, e.ClipRectangle.Width - 3, e.ClipRectangle.Height - 3))
         End Sub
@@ -166,11 +115,6 @@ Namespace Classes
         Down
         Inside
         None
-    End Enum
-
-    Public Enum TitlePosition
-        Top
-        Bottom
     End Enum
 
 End Namespace
