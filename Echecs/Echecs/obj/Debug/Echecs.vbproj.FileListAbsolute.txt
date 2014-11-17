@@ -1,3 +1,13 @@
 C:\Users\VB\AppData\Local\Temporary Projects\Echecs\bin\Debug\Echecs.exe.config
 C:\Users\VB\Documents\GitHub\chess\Echecs\Echecs\bin\Debug\Echecs.exe.config
 C:\Users\abderrahman\Documents\GitHub\chess\Echecs\Echecs\bin\Debug\Echecs.exe.config
+C:\Users\youssef\Documents\GitHub\chess\Echecs\Echecs\bin\Debug\Echecs.exe.config
+C:\Users\youssef\Documents\GitHub\chess\Echecs\Echecs\bin\Debug\Echecs.exe
+C:\Users\youssef\Documents\GitHub\chess\Echecs\Echecs\bin\Debug\Echecs.pdb
+C:\Users\youssef\Documents\GitHub\chess\Echecs\Echecs\bin\Debug\Echecs.xml
+C:\Users\youssef\Documents\GitHub\chess\Echecs\Echecs\obj\Debug\Echecs.Form1.resources
+C:\Users\youssef\Documents\GitHub\chess\Echecs\Echecs\obj\Debug\Echecs.Resources.resources
+C:\Users\youssef\Documents\GitHub\chess\Echecs\Echecs\obj\Debug\Echecs.vbproj.GenerateResource.Cache
+C:\Users\youssef\Documents\GitHub\chess\Echecs\Echecs\obj\Debug\Echecs.exe
+C:\Users\youssef\Documents\GitHub\chess\Echecs\Echecs\obj\Debug\Echecs.xml
+C:\Users\youssef\Documents\GitHub\chess\Echecs\Echecs\obj\Debug\Echecs.pdb
