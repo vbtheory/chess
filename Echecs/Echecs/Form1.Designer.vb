@@ -22,29 +22,56 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.PanelAcceuil2 = New Echecs.Classes.PanelAcceuil()
+        Me.PanelAcceuil3 = New Echecs.Classes.PanelAcceuil()
+        Me.PanelAcceuil1 = New Echecs.Classes.PanelAcceuil()
         Me.SuspendLayout()
         '
-        'Button1
+        'PanelAcceuil2
         '
-        Me.Button1.Location = New System.Drawing.Point(57, 48)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.PanelAcceuil2.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PanelAcceuil2.Image = Global.Echecs.My.Resources.Resources.Screenshot_2014_10_05_22_12_24
+        Me.PanelAcceuil2.Location = New System.Drawing.Point(32, 256)
+        Me.PanelAcceuil2.Name = "PanelAcceuil2"
+        Me.PanelAcceuil2.Size = New System.Drawing.Size(200, 200)
+        Me.PanelAcceuil2.TabIndex = 0
+        Me.PanelAcceuil2.Text = "Paramètres"
+        '
+        'PanelAcceuil3
+        '
+        Me.PanelAcceuil3.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PanelAcceuil3.Image = Global.Echecs.My.Resources.Resources.Screenshot_2014_10_05_22_12_24
+        Me.PanelAcceuil3.Location = New System.Drawing.Point(238, 50)
+        Me.PanelAcceuil3.Name = "PanelAcceuil3"
+        Me.PanelAcceuil3.Size = New System.Drawing.Size(406, 406)
+        Me.PanelAcceuil3.TabIndex = 0
+        Me.PanelAcceuil3.Text = "Multi-joueur"
+        '
+        'PanelAcceuil1
+        '
+        Me.PanelAcceuil1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PanelAcceuil1.Image = Global.Echecs.My.Resources.Resources.Screenshot_2014_10_05_22_12_24
+        Me.PanelAcceuil1.Location = New System.Drawing.Point(32, 50)
+        Me.PanelAcceuil1.Name = "PanelAcceuil1"
+        Me.PanelAcceuil1.Size = New System.Drawing.Size(200, 200)
+        Me.PanelAcceuil1.TabIndex = 0
+        Me.PanelAcceuil1.Text = "Solo"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 261)
-        Me.Controls.Add(Me.Button1)
+        Me.ClientSize = New System.Drawing.Size(676, 506)
+        Me.Controls.Add(Me.PanelAcceuil2)
+        Me.Controls.Add(Me.PanelAcceuil3)
+        Me.Controls.Add(Me.PanelAcceuil1)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents PanelAcceuil1 As Echecs.Classes.PanelAcceuil
+    Friend WithEvents PanelAcceuil2 As Echecs.Classes.PanelAcceuil
+    Friend WithEvents PanelAcceuil3 As Echecs.Classes.PanelAcceuil
 
 End Class
