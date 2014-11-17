@@ -1,0 +1,9 @@
+# Modèle créé le : Mon Nov 17
+
+user (*userId,email,username,password,xp,wins,losses,lastContacted)  
+game (*gameId,started,ended,state,name,gamepassword)  
+hand (*hanid,pawn1,pawn2,pawn3,pawn4,pawn5,pawn6,pawn7,
+	rook1,rook2,queen,bishop1,bishop2,knight1,knight2
+		 king, #gameid)  
+
+plays (*userId, *gameId) 
