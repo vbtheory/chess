@@ -15,7 +15,27 @@ Echecs
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
-</member><member name="P:Echecs.My.Resources.Resources.Screenshot_2014_10_05_22_12_24">
+</member><member name="P:Echecs.My.Resources.Resources.download">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Echecs.My.Resources.Resources.editedcar2">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Echecs.My.Resources.Resources.IMG_8704">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Echecs.My.Resources.Resources.Preset">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Echecs.My.Resources.Resources.Update">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Echecs.My.Resources.Resources.Warning">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
