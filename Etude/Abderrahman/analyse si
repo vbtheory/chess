@@ -1,0 +1,5 @@
+# Modèle créé le : Sun Nov 16 19:33:57 UTC 2014 
+user (userId, email, userName, password, xp, wins, losses, lastContacted) 
+Game (gameId, started, ended, state, name, gamePassword) 
+Hand (handId, peon1, peon2, peon3, peon4, peon5, peon6, peon7, peon8, tower1, tower2, queen, bishop1, bishop2, knight1, knight2, king, #gameId) 
+Plays (userId, gameId) 
