@@ -1,5 +1,6 @@
 ﻿Imports System.ComponentModel
 Imports System.Drawing.Imaging
+Imports Transitions
 
 Namespace Classes
 
