@@ -19,3 +19,5 @@ C:\Users\abderrahman\Documents\GitHub\chess\Echecs\Echecs\obj\Debug\Echecs.Resou
 C:\Users\abderrahman\Documents\GitHub\chess\Echecs\Echecs\obj\Debug\Echecs.vbproj.GenerateResource.Cache
 C:\Users\abderrahman\Documents\GitHub\chess\Echecs\Echecs\bin\Debug\Echecs.pdb
 C:\Users\abderrahman\Documents\GitHub\chess\Echecs\Echecs\bin\Debug\Echecs.xml
+C:\Users\VB\Documents\GitHub\chess\Echecs\Echecs\bin\Debug\Transitions.dll
+C:\Users\VB\Documents\GitHub\chess\Echecs\Echecs\obj\Debug\Echecs.vbprojResolveAssemblyReference.cache

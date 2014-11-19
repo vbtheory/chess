@@ -1,5 +1,6 @@
 ﻿Imports System.ComponentModel
 Imports System.Drawing.Imaging
+Imports Transitions
 
 Namespace Classes
 
@@ -8,7 +9,7 @@ Namespace Classes
         Inherits PictureBox
 
         Dim _timer As Timer = New Timer()
-        Dim _brightness As Single = 0.5
+        Dim _opacity As Single = 0.5
         Dim _image As Bitmap
         Private _state = MouseState.None
         Private _font = Font
@@ -18,7 +19,7 @@ Namespace Classes
 
         Public Sub New()
             If Not System.ComponentModel.LicenseManager.UsageMode = System.ComponentModel.LicenseUsageMode.Designtime Then
-                SetStyle(ControlStyles.OptimizedDoubleBuffer + ControlStyles.ResizeRedraw, True)
+                SetStyle(ControlStyles.DoubleBuffer + ControlStyles.ResizeRedraw, True)
                 SetStyle(ControlStyles.ContainerControl, False)
                 _timer.Interval = 30
                 AddHandler _timer.Tick, AddressOf Animate
@@ -33,12 +34,14 @@ Namespace Classes
             If (State = MouseState.Inside) Then target = 0.9
             If (State = MouseState.None) Then target = 0.75
 
-            If (_brightness = target) Then Return
-            If (_brightness < target) Then _brightness += 0.05
-            If (_brightness > target) Then _brightness -= 0.05
+            If (_opacity = target) Then Return
+            If (_opacity < target) Then _opacity += 0.05
+            If (_opacity > target) Then _opacity -= 0.05
 
             Invalidate()
         End Sub
+
+#Region "Properties"
 
         Public Shadows Property Image() As Bitmap
             Get
@@ -110,6 +113,10 @@ Namespace Classes
             End Set
         End Property
 
+#End Region
+
+#Region "Events"
+
         Protected Overrides Sub OnMouseEnter(ByVal e As EventArgs)
             MyBase.OnMouseEnter(e)
             State = MouseState.Inside
@@ -140,15 +147,17 @@ Namespace Classes
             sf.LineAlignment = StringAlignment.Center
             sf.Alignment = TextAlign
 
-            If (Not IsNothing(_image)) Then DrawImageWithBrightness(e.Graphics, _image, e.ClipRectangle, _brightness)
-            e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(150, TitleColor)), r)
+            If (Not IsNothing(_image)) Then DrawImageWithOpacity(e.Graphics, _image, e.ClipRectangle, _opacity)
+            e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(150, 50, 50, 50)), r)
+            e.Graphics.FillRectangle(New SolidBrush(Color.FromArgb(150 * (_opacity * 1.005), TitleColor)), r)
             e.Graphics.DrawString(MyBase.Text, TextFont, Brushes.White, r, sf)
             ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.White, ButtonBorderStyle.Solid)
             e.Graphics.DrawRectangle(Pens.Black, New Rectangle(e.ClipRectangle.X + 1, e.ClipRectangle.Y + 1, e.ClipRectangle.Width - 3, e.ClipRectangle.Height - 3))
         End Sub
 
-        Sub DrawImageWithBrightness(g As Graphics, img As Bitmap, rectangle As Rectangle, opacity As Single)
+#End Region
 
+        Sub DrawImageWithOpacity(g As Graphics, img As Bitmap, rectangle As Rectangle, opacity As Single)
             Dim matrix As ColorMatrix = New ColorMatrix()
 
             matrix.Matrix33 = opacity
